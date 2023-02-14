@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import MockApi from '../../apis/api';
-import { SingleQuestion } from '../../components/SingleQuestion';
 
 export const fetchData = createAsyncThunk('data/fetchData', async () => {
   const data: any = await MockApi();
@@ -38,7 +37,7 @@ const initialState: quizStateProps = {
   questionNum: 0,
   fetchedData: [],
   selected: {},
-  finished: false
+  finished: false,
 };
 
 export const quizSlice = createSlice({
